@@ -1,4 +1,3 @@
-# Basic bubble sort
 def bubbleSort(arr):
     for i in range(0, len(arr)-1):
         for j in range(len(arr)-1):
