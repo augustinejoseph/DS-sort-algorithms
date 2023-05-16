@@ -7,7 +7,7 @@ def insertionSort(arr):
             j -=1
     return arr
 
-arr = [4,-1,6,44,23,-564, 65, -64,0,0,5,-1]
+arr = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 result = insertionSort(arr)
 print(result)
 
@@ -21,6 +21,6 @@ def insertionSortDesc(arr):
             a -=1
     return arr
 
-arr1 = [4,-1,6,44,23,-564, 65, -64,0,0,5,-1]
+arr1 = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 result1 = insertionSortDesc(arr1)
 print(result1)

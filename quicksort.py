@@ -8,7 +8,7 @@ def quickSort(arr):
     middle = [ x for x in arr if x == pivot]
     return quickSort(left) + middle + quickSort(right)
 
-arr = [4,-1,6,44,23,-564, 65, -64,0,0,5,-1]
+arr = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 result = quickSort(arr)
 print(result)
 
@@ -30,6 +30,6 @@ def quickSortDesc(arra):
             medium.append(arra[i])
     return quickSortDesc(upper)+ medium+ quickSortDesc(lower)
 
-arra = [4,-1,6,44,23,-564, 65, -64,0,0,5,-1]
+arra = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 result1 = quickSortDesc(arra)
 print(result1)
