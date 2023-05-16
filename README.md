@@ -164,6 +164,3 @@ The function then partitions the list into three sub-lists: left, right, and mid
 The function recursively calls itself on the left and right sub-lists to sort them, and concatenates the sorted left, middle, and right lists to form the final sorted list.
 
 The base case of the recursion is when the length of the input list is less than or equal to 1, which was handled in step 1.
-
-## 6. Heap Sort: 
-This algorithm uses a binary heap data structure to sort an array. It first builds a max heap from the array, then repeatedly extracts the maximum element and places it at the end of the array, until the array is sorted.
