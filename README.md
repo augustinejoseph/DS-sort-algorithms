@@ -16,7 +16,7 @@ def bubbleSort(arr):
 arr = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 bubbleSort(arr)
 ```
-The bubbleSort function takes an array arr as an argument, and uses two nested loops to iterate over the array. The outer loop runs from i=0 to i=len(arr)-2, and the inner loop runs from j=0 to j=len(arr)-2.
+The bubbleSort function takes an array arr as an argument, and uses two nested loops to iterate over the array. The outer loop runs from i=0 to len(arr)-2, and the inner loop runs from j=0 to len(arr)-2.
 
 Inside the inner loop, the function checks if the current element arr[j] is greater than the next element arr[j+1]. If this is true, the two elements are swapped using tuple unpacking syntax arr[j], arr[j+1] = arr[j+1], arr[j], effectively moving the greater element towards the end of the array.
 
@@ -43,7 +43,7 @@ arr = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 result = selectionSort(arr)
 print(result)
 ```
-A loop is executed for each element in the list, except for the last one. This loop is used to find the smallest element in the remaining unsorted portion of the list.
+A loop is executed for each element in the list. This loop is used to find the smallest element in the remaining unsorted portion of the list.
 
 The loop has a variable index that keeps track of the index of the smallest element found so far. Initially, it is set to the current index of the loop.
 
@@ -74,7 +74,7 @@ arr = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 result = insertionSort(arr)
 print(result)
 ```
-The for loop iterates over the list arr, starting from the second element (index 1) and going up to the last element (index len(arr)-1).
+The for loop iterates over the list arr, starting from the second element (index 1) and going up to the last element.
 
 For each element arr[i] in the unsorted part of the list, the while loop compares it to the previous element arr[i-1]. If arr[i] is smaller than arr[i-1], then the two elements are swapped using the Python tuple syntax arr[i], arr[i-1] = arr[i-1], arr[i]. This swaps the elements in-place, without needing to create a temporary variable.
 
@@ -84,7 +84,7 @@ Once the while loop has finished, the current element has been inserted into the
 
 The for loop continues to iterate over the remaining unsorted elements of the list, each time inserting the current element into the correct position in the sorted part of the list.
 
-Once the for loop has finished, the entire list is sorted in ascending order.
+Once the for loop has finished, the entire list is sorted.
 
 ## 4. Merge Sort: 
 This is a divide and conquer algorithm that divides an array into two halves, sorts the two halves separately, and then merges the sorted halves back together.
@@ -126,11 +126,11 @@ arr = [5,2,66,34,1,444,87,0,34,-1,90,-34]
 result = mergeSort(arr)
 print(result)
 ```
-The mergeSort function first finds the middle of the arrat by calculating middle = len(arr) // 2. This will be used to divide the array into two halves.
+The mergeSort function first finds the middle of the array by calculating middle = len(arr) // 2. This will be used to divide the array into two halves.
 
 LeftList containing elements from the start of the array up to the middle index, and rightList containing elements from the middle index to the end of the array are created.
 
-Then the mergeSort function is recursively called on leftList and rightList until their lengths become 1 or less. This effectively divides the array into smaller subarrays until each subarray has only one element.
+Then the mergeSort function is recursively called on leftList and rightList until their lengths become 1. This effectively divides the array into smaller subarrays until each subarray has only one element.
 
 Initialize variables i, j, and k to keep track of indices for the subarrays. i represents the index of leftList, j represents the index of rightList, and k represents the index of the merged array arr.
 
@@ -157,10 +157,12 @@ print(result)
 ```
 The quickSort function first checks if the length of the input list arr is less than or equal to 1. If it is, then the list is already sorted and the function simply returns the list.
 
+The base case of the recursion is when the length of the input list is less than or equal to 1.
+
 Otherwise, the function chooses a pivot element as the middle element of the list, using integer division (//) to ensure that the index is an integer.
 
 The function then partitions the list into three sub-lists: left, right, and middle. The left list contains all the elements that are less than the pivot element, the right list contains all the elements that are greater than the pivot element, and the middle list contains all the elements that are equal to the pivot element.
 
 The function recursively calls itself on the left and right sub-lists to sort them, and concatenates the sorted left, middle, and right lists to form the final sorted list.
 
-The base case of the recursion is when the length of the input list is less than or equal to 1, which was handled in step 1.
+
